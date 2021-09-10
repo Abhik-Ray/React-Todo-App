@@ -1,38 +1,110 @@
-.App {
-  text-align: center;
+* {
+	color: white;
+	--border-radius: 7px;
+	--background: rgb(41, 41, 41);
+	--primary: #424242;
+	--secondary: #b3b3b3;
+}
+html {
+	background-color: var(--background);
+}
+input {
+	padding-left: 10px;
+	width: 54%;
+	padding: 5px;
+	margin-left: 1%;
+	color: black;
+	border: none;
+	outline: none;
+	font-size: 80%;
+	font-family: "Segoe UI";
+}
+button {
+	width: 21%;
+	padding: 5px;
+	color: black;
+	background-color: var(--secondary);
+	border: none;
+	border-top: 4px solid var(--primary);
+	border-bottom: 4px solid var(--primary);
+	border-left: 1px solid var(--primary);
+	border-right: 1px solid var(--primary);
+	font-size: 80%;
+	font-family: "Segoe UI";
+}
+BsTrashFill {
+	color: red;
+}
+button:hover {
+	color: white;
+	background-color: var(--primary);
+}
+.right-curve {
+	border-top-right-radius: var(--border-radius);
+	border-bottom-right-radius: var(--border-radius);
+	border-right: 4px solid var(--primary);
+}
+.left-curve {
+	border-top-left-radius: var(--border-radius);
+	border-bottom-left-radius: var(--border-radius);
+	border: 4px solid var(--primary);
+	border-right: 1px solid var(--primary);
+}
+.center {
+	background-color: #616161;
+	border: 5px solid var(--primary);
+	margin: 0;
+	padding: 10px;
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 700px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.todo-item {
+	padding: 5px;
+	margin: 10px;
+	background-color: rgba(256, 256, 256, 0.2);
+	border-radius: 5px;
+	display: flex;
+	justify-content: space-between;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.stretch {
+	width: 100%;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.timestamp {
+	color: rgba(256, 256, 256, 0.4);
+	font-size: small;
 }
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+@media only screen and (max-width: 768px) {
+	/* For mobile phones: */
+	.center {
+		background-color: #616161;
+		border: 5px solid var(--primary);
+		margin: 0;
+		padding: 10px;
+		position: absolute;
+		left: 50%;
+		transform: translateX(-50%);
+		width: fit-content;
+	}
+	.timestamp {
+		color: transparent;
+	}
+	input {
+		width: 40%;
+		margin: 5px;
+		border-radius: var(--border-radius);
+	}
+	button {
+		font-size: 70%;
+		width: fit-content;
+		border-radius: var(--border-radius);
+		margin: 2px;
+		border: none;
+		text-overflow: ellipsis;
+	}
+	.todo-item {
+		width: fit-content;
+	}
 }
