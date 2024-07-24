@@ -53,7 +53,7 @@ function App() {
       <TodoList todos={todos} toggleTodo={toggleTodo} />
       <div className="stretch">
         <input className="left-curve" ref={todoNameRef} type="text" onKeyPress={handleOnKeyPress} placeholder="Type your todo and press Enter"/>
-        <button onClick={addTodoToList}>Add Todo</button>
+        <button onClick={addTodoToList}>Press to add ToDo</button>
         <button className="right-curve" onClick={handleClearTodos}>Clear checked</button>
       </div>
       <br />
