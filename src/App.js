@@ -49,7 +49,7 @@ function App() {
   return (
     <div className="center">
       <div>
-      <h1>The TODO List</h1>
+      <h1>This is the definitive TODO Todo List</h1>
       <TodoList todos={todos} toggleTodo={toggleTodo} />
       <div className="stretch">
         <input className="left-curve" ref={todoNameRef} type="text" onKeyPress={handleOnKeyPress} placeholder="Type your todo and press Enter"/>
